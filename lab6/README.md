@@ -1,14 +1,7 @@
-<style>
-img{
-     max-width:  400px 
-     width: 50%;
-     padding-left: 0%;
-     
-}
-</style>
+
 
 #     <center>lab6
-#### <center>2024/5/1
+#### <center>2024/4/28-2024/5/1
 #### <center>PB22111702 李岱峰
 
 由于操作系统H课要求我写一个shell，其中要求了信号处理，我认为该实验有助于我更深入理解shell信号处理知识，故提前完成shell lab。

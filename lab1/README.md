@@ -1,10 +1,5 @@
-<style>
-img{
-     max-width:  400px 
-     width: 50%;
-     padding-left: 0%;
-}
-</style>
+
+
 
 #     <center>lab1
 #### <center>2024/3/22
