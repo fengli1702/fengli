@@ -69,27 +69,27 @@ char transpose_submit_desc2[] = "Transpose submission 2";
 void transpose_submit2(int M, int N, int A[N][M], int B[M][N])
 {
     int a0, a1, a2, a3, a4, a5, a6, a7;
-    for (int i = 0; i < M; i += 8){
-        for (int j = 0; j < N; j += 8){
-            for (int k = i; k < i + 4&&k<M; k++){
+    for (int i=0; i<M; i+= 8){
+        for (int j=0; j<N;j+=8){
+            for (int k=i; k<i+4&&k<M; k++){
                 // 得到A的第1,2块
-                a0 = A[k][j + 0];
-                a1 = A[k][j + 1];
-                a2 = A[k][j + 2];
-                a3 = A[k][j + 3];
-                a4 = A[k][j + 4];
-                a5 = A[k][j + 5];
-                a6 = A[k][j + 6];
-                a7 = A[k][j + 7];
+                a0=A[k][j+0];
+                a1=A[k][j+1];
+                a2=A[k][j+2];
+                a3=A[k][j+3];
+                a4=A[k][j+4];
+                a5=A[k][j+5];
+                a6=A[k][j+6];
+                a7=A[k][j+7];
                 // 复制给B的第1,2块
-                B[j + 0][k] = a0;
-                B[j + 1][k] = a1;
-                B[j + 2][k] = a2;
-                B[j + 3][k] = a3;
-                B[j + 0][k + 4] = a4;
-                B[j + 1][k + 4] = a5;
-                B[j + 2][k + 4] = a6;
-                B[j + 3][k + 4] = a7;
+                B[j+0][k]=a0;
+                B[j+1][k]=a1;
+                B[j+2][k]=a2;
+                B[j+3][k]=a3;
+                B[j+0][k+4]=a4;
+                B[j+1][k+4]=a5;
+                B[j+2][k+4]=a6;
+                B[j+3][k+4]=a7;
             }
             for (int k = j; k < j + 4&&k<N; k++){
                 // 得到B的第2块
